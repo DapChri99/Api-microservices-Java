@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: ERROR
+    it.progettoserietv: TRACE
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservizio
+    username: postgres
+    password: Sequel
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+api:
+  tvMaze:
+    url: http://api.tvmaze.com/search/shows?q=
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
